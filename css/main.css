@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Outfit:wght@300&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */

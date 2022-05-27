@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Outfit:wght@300&display=swap");
+// font-family: 'Big Shoulders Display', cursive;
+// font-family: 'Outfit', sans-serif;
+$gold-color: #d5966c;
+$almost-black-color: #151515;
+$dark-gray-color: #444;
+$white-color: #fff;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Outfit", sans-serif;
+}
