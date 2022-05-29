@@ -60,6 +60,34 @@
   }
 }
 
+.location {
+  &__heading {
+    font-size: 5rem;
+    color: $white-color;
+    font-family: $big-shoulder-font;
+    text-transform: uppercase;
+  }
+
+  &__descriptions {
+    color: $white-color;
+  }
+  &__street {
+    font-size: 3.2rem;
+    color: $gold-color;
+    font-family: $big-shoulder-font;
+    text-transform: uppercase;
+  }
+
+  &__infos > * {
+    font-size: 1.8rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+}
+
 .footer {
   &__heading {
     font-size: 3.6rem;
@@ -68,6 +96,10 @@
     text-transform: uppercase;
     padding-right: 10rem;
     line-height: 0.9;
+
+    &--location {
+      color: $almost-black-color;
+    }
   }
 
   &__text {
@@ -75,6 +107,9 @@
     color: $white-color;
     letter-spacing: 0.1rem;
     line-height: 1.6;
+    &--location {
+      color: $almost-black-color;
+    }
   }
 
   @media (min-width: 768px) {

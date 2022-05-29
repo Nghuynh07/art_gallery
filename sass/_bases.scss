@@ -11,6 +11,12 @@ $outfit-font: "Outfit", sans-serif;
 $mobile-side-padding: 1.5rem;
 $tablet-side-padding: 3.95rem;
 $desktop-side-padding: 16.5rem;
+
+@mixin hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -26,4 +32,5 @@ $desktop-side-padding: 16.5rem;
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }

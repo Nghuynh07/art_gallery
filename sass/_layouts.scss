@@ -1,5 +1,6 @@
 @use "bases" as *;
 // HEADER STARTS
+
 .header {
   display: flex;
   justify-content: center;
@@ -45,38 +46,6 @@
     flex-direction: column;
     gap: 4rem;
   }
-
-  &__cta {
-    display: flex;
-  }
-  .header__cta:hover .header__link {
-    background-color: $gold-color;
-  }
-  .header__cta:hover .header__arrow {
-    background-color: $almost-black-color;
-  }
-  &__arrow {
-    background-color: $gold-color;
-    display: flex;
-    align-items: center;
-    padding: 2rem;
-    transition: background-color 0.2s;
-    path {
-      fill: $white-color;
-    }
-  }
-  &__link {
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: $almost-black-color;
-    color: $white-color;
-    padding: 2rem 5rem;
-    font-family: $big-shoulder-font;
-    letter-spacing: 0.2rem;
-    transition: background-color 0.2s;
-  }
-
   @media (min-width: 768px) {
     max-height: 90vh;
     &__container {
@@ -332,11 +301,143 @@
 }
 // MAIN ENDS
 
+// MAP STARTS
+
+.map {
+  &__container {
+    display: grid;
+  }
+  &__img {
+    max-height: 80vh;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    &--mobile {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    &--tablet,
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &__cta {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 1;
+    align-self: start;
+    position: absolute;
+  }
+
+  @media (min-width: 768px) {
+    &__img {
+      &--mobile {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__cta {
+      margin-left: 5rem;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__img {
+      &--tablet {
+        display: none;
+      }
+      &--desktop {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__cta {
+      margin-left: 15.5rem;
+    }
+  }
+}
+
+// MAP ENDS
+
+// LOCATION STARTS
+.location {
+  padding: 5rem $mobile-side-padding;
+  background-color: $almost-black-color;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__descriptions {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 5rem $tablet-side-padding;
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      gap: 15em;
+    }
+
+    &__text {
+      padding-right: 8rem;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    padding: 5rem $desktop-side-padding;
+    &__container {
+      justify-content: center;
+      gap: 20rem;
+    }
+    &__text {
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__container {
+      gap: 40rem;
+    }
+    &__text {
+      padding-right: 0rem;
+    }
+  }
+}
+
+// LOCATION ENDS
+
 // FOOTER STARTS
 
 .footer {
   background-color: $almost-black-color;
   padding: 5rem;
+
+  &--location {
+    background-color: $gold-color;
+  }
 
   &__container {
     display: flex;
@@ -351,6 +452,15 @@
   svg {
     cursor: pointer;
     transition: fill 0.2s;
+  }
+
+  &__path--location {
+    fill: $almost-black-color;
+    transition: fill 0.2s;
+  }
+
+  svg:hover .footer__path--location {
+    fill: $white-color;
   }
 
   svg:hover path {
