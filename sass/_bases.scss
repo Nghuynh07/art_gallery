@@ -1,11 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Outfit:wght@300&display=swap");
-// font-family: 'Big Shoulders Display', cursive;
-// font-family: 'Outfit', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Outfit:wght@300&display=swap");
+
 $gold-color: #d5966c;
 $almost-black-color: #151515;
 $dark-gray-color: #444;
 $white-color: #fff;
 
+$big-shoulder-font: "Big Shoulders Display", cursive;
+$outfit-font: "Outfit", sans-serif;
+
+$mobile-side-padding: 1.5rem;
+$tablet-side-padding: 3.95rem;
+$desktop-side-padding: 16.5rem;
 *,
 *::before,
 *::after {
@@ -13,7 +18,12 @@ $white-color: #fff;
   padding: 0;
   outline: none;
   border: none;
+  box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
   font-family: "Outfit", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
 }

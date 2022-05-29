@@ -1,0 +1,97 @@
+@use "bases" as *;
+
+.header {
+  &__heading {
+    font-size: 6rem;
+    font-family: $big-shoulder-font;
+    color: $almost-black-color;
+    line-height: 0.9;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.1rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 768px) {
+    &__heading {
+      font-size: 7rem;
+    }
+  }
+  @media (min-width: 1440px) {
+    &__heading {
+      font-size: 8rem;
+      position: absolute;
+      left: 19rem;
+      margin-top: -10rem;
+      width: 37rem;
+      background: linear-gradient(75deg, white, black);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+}
+
+.main {
+  &__heading {
+    text-align: left;
+    font-size: 5rem;
+    font-family: $big-shoulder-font;
+    line-height: 0.9;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__heading--beInspired {
+    color: $white-color;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+
+  &__text--beInspired {
+    color: $white-color;
+  }
+}
+
+.footer {
+  &__heading {
+    font-size: 3.6rem;
+    color: $white-color;
+    font-family: $big-shoulder-font;
+    text-transform: uppercase;
+    padding-right: 10rem;
+    line-height: 0.9;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    color: $white-color;
+    letter-spacing: 0.1rem;
+    line-height: 1.6;
+  }
+
+  @media (min-width: 768px) {
+    &__heading {
+      font-size: 2.5rem;
+      padding-right: 0;
+    }
+
+    &__text {
+      padding: 0 6rem;
+      justify-self: center;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    &__text {
+      width: 55rem;
+    }
+  }
+}

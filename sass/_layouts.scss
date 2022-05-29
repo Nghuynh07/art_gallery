@@ -1,0 +1,378 @@
+@use "bases" as *;
+// HEADER STARTS
+.header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__darkbg {
+    display: none;
+  }
+
+  &__imgWrapper {
+    display: block;
+    width: 100%;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &__img--tablet {
+    display: none;
+  }
+  &__img--desktop {
+    display: none;
+  }
+
+  &__contents {
+    padding: 0 $mobile-side-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__cta {
+    display: flex;
+  }
+  .header__cta:hover .header__link {
+    background-color: $gold-color;
+  }
+  .header__cta:hover .header__arrow {
+    background-color: $almost-black-color;
+  }
+  &__arrow {
+    background-color: $gold-color;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    transition: background-color 0.2s;
+    path {
+      fill: $white-color;
+    }
+  }
+  &__link {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: $almost-black-color;
+    color: $white-color;
+    padding: 2rem 5rem;
+    font-family: $big-shoulder-font;
+    letter-spacing: 0.2rem;
+    transition: background-color 0.2s;
+  }
+
+  @media (min-width: 768px) {
+    max-height: 90vh;
+    &__container {
+      flex-direction: row;
+      gap: 0;
+      justify-content: center;
+    }
+    &__imgWrapper {
+      flex: 1 1 auto;
+    }
+    &__img {
+      display: none;
+    }
+    &__img--tablet {
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+    &__contents {
+      flex: 1 1 80rem;
+      padding: 0 6rem 0 0;
+      justify-content: center;
+      margin-left: -6rem;
+    }
+  }
+  @media (min-width: 1440px) {
+    margin-inline-end: $desktop-side-padding;
+    &__darkbg {
+      display: block;
+      background: $almost-black-color;
+      flex: 1 1 100rem;
+    }
+    &__imgWrapper {
+      flex-basis: 120rem;
+    }
+    &__img--tablet {
+      display: none;
+    }
+    &__img--desktop {
+      display: flex;
+      height: 100%;
+    }
+    &__contents {
+      align-items: center;
+    }
+
+    &__main {
+      margin-top: 19rem;
+      margin-left: -5rem;
+      flex: 1 1 40rem;
+    }
+  }
+}
+// HEADER ENDS
+
+// MAIN STARTS
+.main {
+  padding: 10rem 0;
+  &__imgTop--tablet,
+  &__imgTop--desktop,
+  &__imgBottom--tablet,
+  &__imgBottom--desktop,
+  &__galleryRightBottom--tablet,
+  &__galleryRightBottom--desktop {
+    display: none;
+  }
+
+  &__container {
+    margin-inline: $mobile-side-padding;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__atGallery {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__imgTop {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__imgBottom {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__galleryRightBottom {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__rightBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__beInspired {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4rem 1.5rem;
+    background-color: $almost-black-color;
+  }
+
+  // screen medium
+
+  @media (min-width: 768px) {
+    &__imgTop,
+    &__imgBottom,
+    &__galleryRightBottom {
+      display: none;
+    }
+
+    &__container {
+      margin-inline: $tablet-side-padding;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    &__top {
+      flex-direction: row-reverse;
+      gap: 8rem;
+      //   min-height: 40vh;
+    }
+    &__atGallery {
+      max-width: 40rem;
+      height: 100%;
+    }
+
+    &__imgWrapperTop {
+      min-width: 40rem;
+    }
+    &__imgTop--tablet {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    // BOTTOM
+    &__bottom {
+      flex-direction: row;
+    }
+    &__chair {
+      min-width: 40rem;
+      flex-shrink: 2;
+    }
+
+    &__beInspired {
+      height: 100%;
+    }
+
+    &__imgBottom--tablet {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    // CHAIR ENDS
+
+    &__rightBottom {
+      gap: 1rem;
+      flex-grow: 3;
+    }
+
+    &__galleryRightBottom--tablet {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &__beInspired {
+      justify-content: center;
+      padding: 4rem;
+    }
+  }
+
+  // DESKTOP M-QUERIES
+  @media (min-width: 860px) {
+    &__container {
+      margin-inline: $desktop-side-padding;
+    }
+    &__imgTop--tablet,
+    &__galleryRightBottom--tablet,
+    &__imgBottom--tablet {
+      display: none;
+    }
+
+    &__atGallery {
+      flex: 1 1 auto;
+    }
+    &__imgTop--desktop {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    &__bottom {
+      gap: 2rem;
+    }
+    &__chair {
+      flex: 1 1 100rem;
+    }
+    &__rightBottom {
+      gap: 2rem;
+    }
+    &__imgBottom--desktop {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__galleryRightBottom--desktop {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &__container {
+      margin-inline: $desktop-side-padding;
+    }
+    &__imgTop--tablet,
+    &__imgBottom--tablet,
+    &__galleryRightBottom--tablet {
+      display: none;
+    }
+  }
+}
+// MAIN ENDS
+
+// FOOTER STARTS
+
+.footer {
+  background-color: $almost-black-color;
+  padding: 5rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  &__links {
+    display: flex;
+    gap: 3rem;
+  }
+  svg {
+    cursor: pointer;
+    transition: fill 0.2s;
+  }
+
+  svg:hover path {
+    fill: $gold-color;
+  }
+
+  @media (min-width: 768px) {
+    padding: 5rem $tablet-side-padding;
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  @media (min-width: 860px) {
+    padding: 10rem $desktop-side-padding;
+  }
+}
+
+// FOOTER ENDS
+
+@media (min-width: 1441px) {
+  body {
+    padding: 0 calc((100% - 1440px) / 2);
+  }
+}
