@@ -395,6 +395,7 @@ html {
 .footer__links {
   display: flex;
   gap: 3rem;
+  z-index: 100;
 }
 .footer svg {
   cursor: pointer;
